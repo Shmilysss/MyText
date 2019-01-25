@@ -57,7 +57,8 @@ SELECT column_name FROM table2
             [ELSE expression_m]
             END
 该语句的执行过程是：将CASE后面表达式的值与各WHEN子句中的表达式的值进行比较，如果两者相等，则返回THEN后的表达式的值，然后跳出CASE语句，否则返回ELSE子句中的表达式的值。ELSE子句是可选项。当CASE语句中不包含ELSE子句时，如果所有比较失败时，CASE语句将返回NULL。
-【例】从数据表stud_info中，选取stud_id、grade，如果grade为“男”则输出“M”，如果为“女”输出“F”。
+</p>
+<p>【例】从数据表stud_info中，选取stud_id、grade，如果grade为“男”则输出“M”，如果为“女”输出“F”。
 SELECT stud_id, sex=CASE gender
                       WHEN ’男’ THEN ’M’
                       WHEN ’女’ THEN ’F’
