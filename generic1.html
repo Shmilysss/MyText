@@ -49,7 +49,27 @@ SELECT column_name FROM table2
  
 </p>
 								<h2>二、 case when then else end 语法</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<p>CASE命令有两种语句格式。
+语法形式1：CASE expression
+            WHEN expression_11 THEN expression_12
+             …
+            WHEN expression_n1 THEN expression_n2
+            [ELSE expression_m]
+            END
+该语句的执行过程是：将CASE后面表达式的值与各WHEN子句中的表达式的值进行比较，如果两者相等，则返回THEN后的表达式的值，然后跳出CASE语句，否则返回ELSE子句中的表达式的值。ELSE子句是可选项。当CASE语句中不包含ELSE子句时，如果所有比较失败时，CASE语句将返回NULL。
+【例】从数据表stud_info中，选取stud_id、grade，如果grade为“男”则输出“M”，如果为“女”输出“F”。
+SELECT stud_id, sex=CASE gender
+                      WHEN ’男’ THEN ’M’
+                      WHEN ’女’ THEN ’F’
+                    END
+FROM stud_info
+语法形式2：CASE WHEN condition_expression_1 THEN expression_1
+              …
+             WHEN condition_expression_n THEN expression_n
+             [ELSE expression_m]
+           END
+该语句的执行过程是：首先测试WHEN后的条件表达式的值，如果其值为真，则返回THEN后面的表达式的值，否则测试下一个WHEN子句中的表达式的值，如果所有WHEN子句后的表达式的值都为假，则返回ELSE后的表达式的值，如果在CASE语句中没有ELSE子句，则CASE表达式返回NULL。
+注意：CASE命令可以嵌套到SQL语句中。</p>
 							</section>
 
 					</div>
