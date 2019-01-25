@@ -19,8 +19,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Generic</h1>
-						<p>Ipsum dolor sit amet nullam</p>
+						<h1>MySQL</h1>
+						<p>MySQL 中 select 高级用法</p>
 					</header>
 
 				<!-- Main -->
@@ -29,10 +29,26 @@
 						<!-- Content -->
 							<section id="content" class="main">
 								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
+								<h2>一、 union 和 union all</h2>
+								<p>UNION 用于合并两个或多个 SELECT 语句的结果集，并消去表中任何重复行。 UNION 内部的 SELECT 语句必须拥有相同数量的列，列也必须拥有相似的数据类型。 同时，每条 SELECT 语句中的列的顺序必须相同.</p>
+								<p>SQL UNION 语法：
+
+
+1
+2
+3
+4
+5
+
+ --默认地，UNION 操作符选取不同的值。如果允许重复的值，请使用 UNION ALL
+--当 ALL 随 UNION 一起使用时（即 UNION ALL），不消除重复行
+SELECT column_name FROM table1
+UNION
+SELECT column_name FROM table2
+
+ 
+</p>
+								<h2>二、 case when then else end 语法</h2>
 								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
 							</section>
 
